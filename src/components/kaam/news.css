@@ -1,0 +1,154 @@
+.form{
+    /* border: solid #245ec2; */
+    /* z-index: 1; */
+    width: 100%;;
+    /* padding: 1vh; */
+    /* margin-top:4vh; */
+    /* margin-left:73vh; */
+    /* border-radius: 2vh; */
+    /* opacity: 1; */
+    /* filter: blur(1px); */
+    /* box-shadow: 0 14px 28px #5b7bb2, 0 10px 10px #5b7bb2;
+    box-sizing: border-box; */
+}
+.head{
+    font-size: 6vh;
+    /* float: right; */
+    margin-left: 70vh;
+    margin-top: 2vh;
+    font-weight: 700;
+    margin-bottom: 1.8vh;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15); 
+}
+.filter{
+    float: right;
+    /* position: absolute; */
+    /* margin-top:1vh; */
+}
+.but{   
+    display: block;
+   margin-top: 1.5vh;
+   margin-bottom: 1.5vh;
+   width:15vh;
+   padding: 1vh;
+   height:4vh;
+   border-radius: 1vh;
+   outline: none;
+   border: 1px solid #245ec2;
+   box-shadow: 4px 14px 28px #070c14, 0 10px 10px #040a14;
+   background-image: radial-gradient(circle, #051937, #0f3355, #1a5073, #276e90, #388eac);
+   color:white;
+   font-size: 1.8vh;  
+}
+ 
+.but:hover{
+    /* border: linear-gradient(to right top, #0c2141, #004c74, #007da4, #00b1cb, #17e7e7);   */
+   cursor: pointer;
+}
+
+.but:active{
+    animation: anim 0.1s linear;
+}
+
+@keyframes anim{
+    0%{}
+    50%{
+        transform: translateY(0.5vh);
+    }
+    100%{
+        transform: translateY(-0.5vh);
+    }
+}
+
+.news{
+    /* position: relative; */
+    float:  left;
+    margin-left: 10%;
+    margin-right: 20%;
+    margin-bottom: 4vh;
+    width:80%;
+    /* height: 20vh; */
+    /* max-height: 100vh; */
+    margin-top: 4vh;
+    /* border: 1px solid #245ec2; */
+    /* box-shadow: 0 14px 28px #5b7bb2, 0 10px 10px #5b7bb2; */
+    box-shadow: 4px 14px 28px #070c14, 0 10px 10px #040a14;
+    background: url('../../images/dusri.jpg')  no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2vh;
+    /* box-sizing: border-box; */
+}
+
+.headertwo{
+    font-size: 2vh;
+    margin-bottom: 1vh;
+    text-align: justify;
+    font-weight: 650;
+    text-decoration: underline;
+    text-shadow: 
+               0 6px 1px rgba(12, 12, 12, 0.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15); 
+    
+}
+ 
+.img{
+    float: left;
+    width:20%;
+    margin-left: 1vh;
+    margin-top:2vh;
+    margin-bottom: 2vh;
+} 
+
+#img{
+    width:100%;   
+    font-size: 2vh;
+    /* z-index: -1;  */
+    /* border: 1px solid #245ec2; */
+    box-shadow: 4px 14px 28px #070c14, 0 10px 10px #040a14;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 650;
+    border-radius: 2vh;
+    text-shadow: 
+    0 6px 1px rgba(12, 12, 12, 0.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15); 
+}
+.content{
+        /* float: left; */
+        margin-right: 2vh;
+        /* margin-left: 2vh; */
+        margin-left:38vh;
+        /* text-align: justify; */
+        margin-top:2vh;
+        box-sizing: border-box;
+}
+
+.desc{
+    /* margin-top: 1vh; */
+    display: inline;
+    line-height: 2.5vh;
+    text-align: justify;
+    font-weight: 450;
+}
