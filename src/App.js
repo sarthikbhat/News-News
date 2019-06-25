@@ -3,6 +3,7 @@ import Navbar from './components/needed/navbar';
 import News from './components/kaam/news';
 import Trend from './components/kaam/trending';
 import {BrowserRouter , Route} from 'react-router-dom';
+import Footer from './components/needed/footer';
 
 class App extends Component {
   render(){
@@ -10,8 +11,9 @@ class App extends Component {
         <BrowserRouter>
       <div className="App">
       <Navbar/>
-      <Trend/>
+      {/* <Trend/> */}
       <News/> 
+      <Footer />
       </div>
       </BrowserRouter>
     );

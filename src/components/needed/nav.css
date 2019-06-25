@@ -1,5 +1,6 @@
 .navbar{
     /* position: fixed; */
+    /* position: relative; */
     /* top:0; */
     /* z-index: ; */
     /* background-color: #5b7bb2; */
@@ -26,7 +27,7 @@
 
 .time{
     float: right;
-    margin-right: 5vh;
+    margin-right: 2vh;
     margin-top: 2vh;
     font-size: 2vh;
     font-weight: 700;

@@ -77,9 +77,7 @@ class Navbar extends Component {
                 <img src={title} alt="Ek News Ka Logo" id="logo"/>
                  <div className="header">News-News</div>
                 </div>
-            <div className="time"><span>{day}, {date}{date==1?('st'):(date==2?('nd'):(date==3?('rd'):('th')))} {month}</span>
-             <span> | </span>
-              <span>{hour}:{min} {hours >= 12 ?("PM"):("AM")}</span>
+            <div className="time"><span>{day}, {date}{date==1?('st'):(date==2?('nd'):(date==3?('rd'):('th')))} {month} | {hour}:{min} {hours >= 12 ?("PM"):("AM")}</span>
               </div>
           </div>
       </div>

@@ -2,6 +2,15 @@ import React,{Component} from 'react';
 import './trending.css'
 import {Link} from 'react-router-dom';
 class Trend extends Component {
+
+  handleclick=(e)=>{
+    var mytext = e.target.textContent;
+    var text = mytext.toLowerCase();
+    this.props.handledata(text);
+    // console.log(text);
+    }
+
+  
   render(){
       return (
       <div className="trending">
@@ -10,13 +19,13 @@ class Trend extends Component {
              Trending Topics : 
       </div>
       <div className="topic">
-      <Link><div className="topics">Entertainment</div></Link>
-      <Link><div className="topics">Business</div></Link>
-      <Link><div className="topics">Health</div></Link>
-      <Link><div className="topics">Sports</div></Link>
-      <Link><div className="topics">Technology</div></Link>
-      <Link><div className="topics">Science</div></Link>
-      <Link><div className="topics">General</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>Entertainment</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>Business</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>Health</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>Sports</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>Technology</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>Science</div></Link>
+      <Link><div className="topics" onClick={this.handleclick}>General</div></Link>
       </div>
       </div>
       </div>
