@@ -1,17 +1,18 @@
 import React,{Component} from 'react';
 import './trending.css'
 import {Link} from 'react-router-dom';
+
 class Trend extends Component {
 
   handleclick=(e)=>{
     var mytext = e.target.textContent;
     var text = mytext.toLowerCase();
-    this.props.handledata(text);
+    this.props.handledata(text,mytext);
     // console.log(text);
     }
-
   
   render(){
+    
       return (
       <div className="trending">
           <div className="trend">
@@ -28,6 +29,7 @@ class Trend extends Component {
       <Link><div className="topics" onClick={this.handleclick}>General</div></Link>
       </div>
       </div>
+     
       </div>
     );
   } 

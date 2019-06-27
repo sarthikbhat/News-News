@@ -10,12 +10,13 @@
 
 .trend{
     margin-left:10vh;
+    /* width: 65%; */
 }
 
 .titles{  
     /* clear: both; */
    float: left;
-    margin-left: 2vh;
+    margin-left: 1vh;
     margin-top: 1.4vh;
     margin-bottom: 0.2vh;
     font-size: 3vh;
@@ -31,6 +32,7 @@
 }
 
 .topic{
+    /* position: absolute; */
     float: left;
    margin-top: 2vh;
 }
@@ -39,8 +41,8 @@
     /* clear: both; */
     display: inline;
     font-size: 1.8vh;
-    margin-left: 5vh;
-    margin-right: 8vh;
+    margin-left: 4%;
+    margin-right: 18%;
     color:white;
     border-radius: 1vh;
     padding: 1vh;

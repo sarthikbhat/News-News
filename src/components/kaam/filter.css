@@ -1,0 +1,19 @@
+.btn{
+    font-size: 1.8vh;
+    color:white;
+    border-radius: 1vh;
+    position: absolute;
+    left:93%;
+    top: 1.5vh;
+    box-sizing: border-box;
+    box-shadow: 4px 0px 28px #070c14, 0 10px 10px #040a14;
+    background-image: radial-gradient(circle, #051937, #0f3355, #1a5073, #276e90, #388eac);
+}
+
+.modu{
+    background-image: radial-gradient(circle, #051937, #0f3355, #1a5073, #276e90, #388eac); 
+}
+
+.modal-footer{
+    background-image: radial-gradient(circle, #051937, #0f3355, #1a5073, #276e90, #388eac);
+}
