@@ -2,22 +2,29 @@ import React,{Component} from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import './news.css'
-import Trend from '../kaam/trending'
 import Filters from './filter';
+import load from '../../images/805.gif'
 
 class News extends Component {
     state = {
         news : [ ],
-        topic: [ ]
+        topic: [ ],
+        resp:''
     }
-    componentDidMount(){  
+    componentDidMount(){ 
+      
+    setTimeout(() => {
+      document.getElementById('loading').style.display="none";
+    }, 1000);
+      
       axios.get('https://newsapi.org/v2/top-headlines?country=in&category&apiKey=f71ef4255a714d97bc92dd8e23c9e0f2')
         .then(res=>{
             this.setState({
               news: res.data.articles.slice(0,10),
               topic:'of India'
             }) 
-            console.log(this.state.news);
+            console.log(res.status);
+            console.log(this.state.news); 
             console.log(this.props.handleclick);
             
         })
@@ -38,22 +45,35 @@ class News extends Component {
     //     })
     // }  
     
-    handle=(topic,topic2)=>
+      // handle=(topic,topic2)=>
+      // {
+      //     if(topic=='general'){
+      //       topic2= 'of India';
+      //     } 
+      //    axios.get('https://newsapi.org/v2/top-headlines?country=in&category='+topic+'&apiKey=f71ef4255a714d97bc92dd8e23c9e0f2')
+      //     .then(res=>{
+      //         this.setState({
+      //           news: res.data.articles.slice(0,10),
+      //           topic : topic2
+      //         }) 
+      //         console.log(this.state.news);
+      //         console.log(this.props.handleclick);
+      //       })
+          
+      // }
+
+    handle2=(country,topic)=>
     {
-      // this.setState({
-      //   topic
-      // })
-      // console.log(this.state.topic);
-      // const category= this.state.topic;
-      // console.log(category);
-        if(topic=='general'){
-          topic2= 'of India';
-        } 
-       axios.get('https://newsapi.org/v2/top-headlines?country=in&category='+topic+'&apiKey=f71ef4255a714d97bc92dd8e23c9e0f2')
+      document.getElementById('loading').style.display="block";
+      setTimeout(() => {
+        document.getElementById('loading').style.display="none";
+      }, 1000);
+       axios.get('https://newsapi.org/v2/top-headlines?country='+country+'&category='+topic+'&apiKey=f71ef4255a714d97bc92dd8e23c9e0f2')
         .then(res=>{
             this.setState({
               news: res.data.articles.slice(0,10),
-              topic : topic2
+              topic,
+              resp:res.status
             }) 
             console.log(this.state.news);
             console.log(this.props.handleclick);
@@ -61,17 +81,11 @@ class News extends Component {
          
     }
 
-    handle2=(country)=>
-    {
-       axios.get('https://newsapi.org/v2/top-headlines?country='+country+'&apiKey=f71ef4255a714d97bc92dd8e23c9e0f2')
-        .then(res=>{
-            this.setState({
-              news: res.data.articles.slice(0,10),
-            }) 
-            console.log(this.state.news);
-            console.log(this.props.handleclick);
-          })
-         
+    showerr(){
+      if(!this.state.resp || this.state.resp != '200'){
+        return "hello error"
+        
+      }
     }
 
     render(){
@@ -99,10 +113,14 @@ class News extends Component {
           )
         })
       ):
-      ( <div className="headtitle"></div> )
+      (  
+          <div className="headtitle">{this.showerr}</div>
+       )
       return (
       <div>
-      <Trend handledata={this.handle}/>
+      <div id="loading">
+  <img id="loading-image" src={load} alt="Loading..." />
+</div>
       <Filters handledata2={this.handle2}/>
       <div className="form">
         <span style={{marginLeft:"20vh"}}>
